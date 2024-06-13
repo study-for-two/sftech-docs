@@ -1,0 +1,50 @@
+# Astroを Github Actions で FTPサーバーにデプロイするワークフロー
+name: Deploy to FTP Server
+
+# mainブランチへのpushをトリガーにしてデプロイを実行
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # ジョブを実行するランナーの環境をubuntu-latestに指定
+    runs-on: ubuntu-latest
+
+    steps:
+      # リポジトリをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Node.jsをセットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 依存関係をインストール
+      - name: Install dependencies
+        run: npm ci
+
+      # Astroサイトをビルド
+      - name: Build Astro site
+        run: npm run build
+
+      # ビルド結果をFTPサーバーにデプロイ
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          # FTPサーバーのアドレス (シークレットから取得) 
+          server: ${{ secrets.FTP_SERVER }}
+          # FTPログインユーザー名 (シークレットから取得) 
+          username: ${{ secrets.FTP_USERNAME }}
+          # FTPログインパスワード (シークレットから取得)   
+          password: ${{ secrets.FTP_PASSWORD }}
+          # FTPサーバー側の格納先フォルダパス (シークレットから取得) 
+          # FTPルートから見た相対パスで可 ("sftech-docs/")
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          # Astroのビルド結果が出力されるディレクトリ
+          local-dir: ./dist/
+          # デプロイ先のディレクトリを完全に削除してからアップロード
+          dangerous-clean-slate: true
