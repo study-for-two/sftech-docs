@@ -74,7 +74,6 @@ export default defineConfig({
         {
           label: "SSH",
           autogenerate: { directory: "secure-shell" },
-          badge: "New",
         },
         {
           label: "LOLIPOP!",

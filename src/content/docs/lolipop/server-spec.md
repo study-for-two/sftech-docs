@@ -6,7 +6,7 @@ sidebar:
   order: 1
 ---
 
-※2024年6月14日時点の情報です。詳細は <https://lolipop.jp/service/server-spec/> から確認してください。
+※2024年6月14日時点の情報です。詳細は <a href="https://lolipop.jp/service/server-spec/" target="_blank">https://lolipop.jp/service/server-spec/</a> から確認してください。
 
 ## システム構成
 
@@ -38,7 +38,7 @@ sidebar:
 | mod_rewrite | ○ |
 | HTTPアクセスログの保存 | ○ |
 | HTTPアクセスログの保存期間 | 1〜3ヶ月 |
-| アクセス解析ツール | analog <br> ハイスピードプラン・エンタープライズプランでは提供していません。 |
+| アクセス解析ツール | analog <br> ※ハイスピードプラン・エンタープライズプランでは提供していません。 |
 | ドメイン別アクセスログの保存 | ○ |
 | SSL認証局(独自SSL) | 有料SSL(GlobalSign) / 無料SSL(Let's Encrypt) |
 | 認証局(ロリポップ!のドメインのSSL) | Let's Encrypt |
@@ -131,7 +131,7 @@ sidebar:
 | 項目 | 仕様 |
 | --- | --- |
 | サーバーソフトウェア名 | MySQL8.0 |
-| データベースの形式 | MyISAM / InnoDBj |
+| データベースの形式 | MyISAM / InnoDB |
 | MySQLデータベース管理ツール | ○ (phpMyAdmin) |
 | MySQLの文字コード | utf-8 (MySQL4.0ではEUC-JP) |
 | MySQLiの利用 | ○ |

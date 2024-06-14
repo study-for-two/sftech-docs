@@ -42,7 +42,7 @@ jobs:
           # FTPログインパスワード (シークレットから取得)   
           password: ${{ secrets.FTP_PASSWORD }}
           # FTPサーバー側の格納先フォルダパス (シークレットから取得) 
-          # FTPルートから見た相対パスで可 ("sftech-docs/")
+          # FTPルートから見た相対パスで指定する ("./sftech-docs/")
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           # Astroのビルド結果が出力されるディレクトリ
           local-dir: ./dist/
