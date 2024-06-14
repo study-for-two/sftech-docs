@@ -1,8 +1,8 @@
 ---
-title: サーバーの仕様
+title: サーバーの仕様一覧
 description: サーバー仕様の解説
 sidebar:
-  label: 仕様
+  label: サーバー仕様
   order: 1
 ---
 
