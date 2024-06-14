@@ -6,7 +6,7 @@ sidebar:
   order: 3
 ---
 
-LOLIPOP!レンタルサーバーでCI/CDを設定する手順です。ここで作成する
+LOLIPOP!レンタルサーバーでCI/CDを設定する手順です。
 
 ## サーバー上での作業
 
@@ -18,7 +18,7 @@ ssh lolipop
 
 ### 2. サーバー上で鍵を作成
 
-`<リポジトリ名>`は対象となるリポジトリの名称に置き換えてください。
+`<リポジトリ名>`は対象となるリポジトリの名称に置き換えてください。コメントはリポジトリ名である必要はありませんが、拘りがないのであれば何に使用している公開鍵かを判別できるものにしましょう。
 
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/github/<リポジトリ名> -C "<リポジトリ名>"
@@ -28,7 +28,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/github/<リポジトリ名> -C "<リポジトリ
 
 ### 3. 設定を追記
 
-`~/.ssh/config`に以下の設定を追記してください。リポジトリ一つずつに設定が必要です。
+`~/.ssh/config`に以下の設定を追記してください。ここでは各リポジトリのエイリアスエントリを追加します。リポジトリ一つずつに設定が必要です。
 
 ```vim
 # GitHub
@@ -39,7 +39,7 @@ Host github
   ForwardAgent yes
 
 # リポジトリごとのDeploy Keysの設定
-Host github.com#<リポジトリ名>
+Host github.com--<リポジトリ名>
   Hostname github.com
   IdentityFile=~/.ssh/github/<リポジトリ名>/id_ed25519
 ```
@@ -67,8 +67,10 @@ Host github.com#<リポジトリ名>
 
 CI/CDを設定するリポジトリをサーバー上にクローンします。Organization内のリポジトリの場合は、以下のように指定することでクローンが可能です。
 
+`<オーナー>`にはOrganization名が入ります。リポジトリのURLは`https://github.com/<オーナー>/<リポジトリ名>`で構成されているので、そこから取得してください。
+
 ```bash
-git clone github.com#<リポジトリ名>:<OWNER>/<リポジトリ名>.git
+git clone github.com--<リポジトリ名>:<オーナー>/<リポジトリ名>.git
 ```
 
 ## GitHub Actions

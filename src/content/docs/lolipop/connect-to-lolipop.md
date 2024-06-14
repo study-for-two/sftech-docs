@@ -8,11 +8,11 @@ sidebar:
 
 ## コンソール画面
 
-<a href="https://user.lolipop.jp/" target="_blank">https://user.lolipop.jp/</a> からログインする。「独自ドメイン」タブを選択し、ドメインとパスワードを入力する。
+<a href="https://user.lolipop.jp/" target="_blank">https://user.lolipop.jp/</a> からログインします。「独自ドメイン」タブを選択し、ドメインとパスワードを入力してください。
 
 ## FTP接続
 
-ここではWinSCPをインストールして接続設定を行う手順を示す。
+ここではWinSCPをインストールして接続設定を行う手順を示します。
 
 1. WinSCPをダウンロードしてインストールします。公式サイト(<https://winscp.net/eng/download.php>)からインストーラをダウンロードできます。
 
