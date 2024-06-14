@@ -76,6 +76,11 @@ export default defineConfig({
           autogenerate: { directory: "secure-shell" },
           badge: "New",
         },
+        {
+          label: "LOLIPOP!",
+          autogenerate: { directory: "lolipop" },
+          badge: "New",
+        },
       ],
     }),
   ],
