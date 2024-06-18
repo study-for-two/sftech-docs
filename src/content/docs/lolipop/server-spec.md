@@ -6,7 +6,7 @@ sidebar:
   order: 1
 ---
 
-※2024年6月14日時点の情報です。詳細は <a href="https://lolipop.jp/service/server-spec/" target="_blank">https://lolipop.jp/service/server-spec/</a> から確認してください。
+※2024年6月14日時点の情報です。詳細は <https://lolipop.jp/service/server-spec/> から確認してください。
 
 ## システム構成
 

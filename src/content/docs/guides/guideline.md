@@ -4,9 +4,6 @@ description: ガイドラインを掲載しています。
 sidebar:
   label: ガイドライン
   order: 1
-  badge:
-    text: Caution
-    variant: caution
 ---
 
 情報システムチームとして活動する上で順守すべき規約を掲載しています。これらの規約を故意に破ることが確認された場合、活動の停止を命じることがあります。

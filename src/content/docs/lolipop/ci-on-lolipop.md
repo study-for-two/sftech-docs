@@ -65,7 +65,7 @@ Host github.com--<リポジトリ名>
 
 5. **[キーの追加]** をクリックします。
 
-詳しくは <a href="https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys" target="_blank">https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys</a> を参照してください。
+詳しくは <https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys> を参照してください。
 
 ### 5. リポジトリのクローン
 

@@ -8,7 +8,7 @@ sidebar:
 
 ## コンソール画面
 
-<a href="https://user.lolipop.jp/" target="_blank">https://user.lolipop.jp/</a> からログインします。「独自ドメイン」タブを選択し、ドメインとパスワードを入力してください。
+<https://user.lolipop.jp/> からログインします。「独自ドメイン」タブを選択し、ドメインとパスワードを入力してください。
 
 ## FTP接続
 
@@ -54,10 +54,10 @@ Host lolipop
 
 ### 2. サーバーにSSHでログイン
 
-次のコマンドを実行してSSH接続を行います。`-A`オプションを付けることで、エージェント転送機能を使用します。
+次のコマンドを実行してSSH接続を行います。
 
 ```bash
-ssh -A lolipop
+ssh lolipop
 ```
 
 ### 3. サーバー上で`~/.ssh/config`を編集
@@ -72,6 +72,10 @@ Host github
   ForwardAgent yes
 ```
 
-※Lolipop用の設定に`ForwardAgent yes`を追加してください。これにより、エージェント転送機能が有効になります。
+※Lolipop用の設定に`ForwardAgent yes`を追加してください。ログイン時に`-A`オプションをつけるとエージェント転送機能が有効になります。
+
+```bash
+ssh -A lolipop
+```
 
 これで、サーバー上でGitHubと連携するための設定が完了しました。エージェント転送機能により、ローカルの鍵を使ってGitHubとの通信が行われます。
