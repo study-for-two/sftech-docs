@@ -1,25 +1,25 @@
 ---
-title: SSH Keyの作成
-description: SSH Keyの作成方法について解説しています。
+title: SSHキーの作成
+description: SSHキーの作成方法について解説しています。
 sidebar:
-  label: SSH Key
+  label: SSHキー
   order: 1
 ---
 
 
-以下は、SSH Keyの作成からGitHub (GitLab) アカウントへの登録までの手順です。
+以下は、SSHキーの作成からGitHub (GitLab) アカウントへの登録までの手順です。
 
-## 新しいSSH Keyの作成
+## 新しいSSHキーの作成
 
 1. WSLのUbuntuを起動します。
 
-2. 以下のコマンドを実行して、新しいSSH Keyを作成します。`your@email.com`の部分は、GitHubに登録しているメールアドレスに置き換えてください。
+2. 以下のコマンドを実行して、新しいSSHキーを作成します。`your@email.com`の部分は、GitHubに登録しているメールアドレスに置き換えてください。
 
    ```bash
    ssh-keygen -t ed25519 -C "your@email.com"
    ```
 
-3. SSH Keysの保存先を聞かれるので、特に変更する必要がなければ、そのまま`Enter`を押します。
+3. SSHキーの保存先を聞かれるので、特に変更する必要がなければ、そのまま`Enter`を押します。
 
    ```bash
    Enter file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
@@ -32,9 +32,9 @@ sidebar:
    Enter same passphrase again: [Type passphrase again]
    ```
 
-これで、SSH Keysの作成が完了しました。
+これで、SSHキーの作成が完了しました。
 
-## GitHubアカウントへのSSH Keyの登録
+## GitHubアカウントへのSSHキーの登録
 
 1. 以下のコマンドを実行して、`~/.ssh/id_ed25519.pub`の内容をクリップボードにコピーします。
 
@@ -48,11 +48,11 @@ sidebar:
 
 4. `New SSH Key`をクリックします。
 
-5. `Title`に識別できる文字列を入力します。`Key Type`は"Authentication Key"を選択し、`Key`に先ほどクリップボードにコピーしたSSH Keyをペーストします。
+5. `Title`に識別できる文字列を入力します。`Key Type`は"Authentication Key"を選択し、`Key`に先ほどクリップボードにコピーしたSSHキーをペーストします。
 
-6. `Add SSH Key`をクリックして、SSH Keyを登録します。
+6. `Add SSH Key`をクリックして、SSHキーを登録します。
 
-## GitLabアカウントへのSSH Keyの登録
+## GitLabアカウントへのSSHキーの登録
 
 UIの説明は日本語化されていることを前提としています。
 
@@ -68,9 +68,9 @@ UIの説明は日本語化されていることを前提としています。
 
 4. `新しいキーを追加`をクリックします。
 
-5. `タイトル`に識別できる文字列を入力します。`使用タイプ`は"認証と署名"を選択し、`キー`に先ほどクリップボードにコピーしたSSH Keyをペーストします。有効期限はの設定は任意でよいですが、自分のPCであれば設定しなくても構いません。
+5. `タイトル`に識別できる文字列を入力します。`使用タイプ`は"認証と署名"を選択し、`キー`に先ほどクリップボードにコピーしたSSHキーをペーストします。有効期限はの設定は任意でよいですが、自分のPCであれば設定しなくても構いません。
 
-6. `キーを追加`をクリックして、SSH Keyを登録します。
+6. `キーを追加`をクリックして、SSHキーを登録します。
 
 ## 確認
 
@@ -92,13 +92,13 @@ UIの説明は日本語化されていることを前提としています。
    Are you sure you want to continue connecting (yes/no)?
    ```
 
-3. 以下のようなメッセージが表示されれば、SSH Keyの登録が成功しています。
+3. 以下のようなメッセージが表示されれば、SSHキーの登録が成功しています。
 
    ```bash
    Hi username! You've successfully authenticated, but GitHub does not
    provide shell access.
    ```
 
-これで、GitHub・GitLabアカウントにSSH Keyが登録され、`git@`を使用してアクセスできるようになりました。
+これで、GitHub・GitLabアカウントにSSHキーが登録され、`git@`を使用してアクセスできるようになりました。
 
-以上が、SSH Keyの作成とGitHub・GitLabアカウントへの登録手順です。
+以上が、SSHキーの作成とGitHub・GitLabアカウントへの登録手順です。
