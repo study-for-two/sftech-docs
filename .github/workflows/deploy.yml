@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -35,13 +36,13 @@ jobs:
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          # FTPサーバーのアドレス (シークレットから取得) 
+          # FTPサーバーのアドレス (シークレットから取得)
           server: ${{ secrets.FTP_SERVER }}
-          # FTPログインユーザー名 (シークレットから取得) 
+          # FTPログインユーザー名 (シークレットから取得)
           username: ${{ secrets.FTP_USERNAME }}
-          # FTPログインパスワード (シークレットから取得)   
+          # FTPログインパスワード (シークレットから取得)
           password: ${{ secrets.FTP_PASSWORD }}
-          # FTPサーバー側の格納先フォルダパス (シークレットから取得) 
+          # FTPサーバー側の格納先フォルダパス (シークレットから取得)
           # FTPルートから見た相対パスで指定する ("./sftech-docs/")
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           # Astroのビルド結果が出力されるディレクトリ
