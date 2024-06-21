@@ -6,7 +6,8 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  repository_dispatch:
+    types: [after_saving_wordpress]
 
 jobs:
   deploy:
