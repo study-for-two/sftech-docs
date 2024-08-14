@@ -42,7 +42,7 @@ sidebar:
      git config --global user.name "Your Name"
      ```
 
-2. 以下のコマンドを実行して、メールアドレスを設定します。`"your@email.com"`の部分を実際のメールアドレスに置き換えてください。ドメインが`@studyfortwo.org`のアドレスを推奨します。
+2. 以下のコマンドを実行して、メールアドレスを設定します。`"your@email.com"`の部分を実際のメールアドレスに置き換えてください。
 
      ```bash
      git config --global user.email "your@email.com"
